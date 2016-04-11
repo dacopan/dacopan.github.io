@@ -1,3 +1,7 @@
+//margin-top: 4px in form input remove \9
+//.caret \9
+//.dropdown-menu > .disabled > a:focus remove filter remove : not-allowed;
+//remove Microsoft.gradient
 /*
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -1239,7 +1243,7 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
     margin: 4px 0 0;
-    margin-top: 1px \9;
+    margin-top: 1px ;
     line-height: normal;
 }
 input[type="file"] {
@@ -1373,7 +1377,7 @@ input[type="search"] {
 .checkbox-inline input[type="checkbox"] {
     position: absolute;
     margin-left: -20px;
-    margin-top: 4px \9;
+    margin-top: 4px;
 }
 .radio + .radio,
 .checkbox + .checkbox {
@@ -2225,7 +2229,7 @@ tbody.collapse.in {
     margin-left: 2px;
     vertical-align: middle;
     border-top: 4px dashed;
-    border-top: 4px solid \9;
+    border-top: 4px solid;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
 }
@@ -2301,7 +2305,7 @@ tbody.collapse.in {
     text-decoration: none;
     background-color: transparent;
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    //filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     cursor: not-allowed;
 }
 .open > .dropdown-menu {
@@ -2342,7 +2346,7 @@ tbody.collapse.in {
 .navbar-fixed-bottom .dropdown .caret {
     border-top: 0;
     border-bottom: 4px dashed;
-    border-bottom: 4px solid \9;
+    border-bottom: 4px solid ;
     content: "";
 }
 .dropup .dropdown-menu,
@@ -4288,7 +4292,7 @@ button.close {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
 .carousel-control.right {
     left: auto;
@@ -4298,7 +4302,7 @@ button.close {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-control:hover,
 .carousel-control:focus {
@@ -4361,7 +4365,7 @@ button.close {
     border: 1px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #000 \9;
+    background-color: #000 ;
     background-color: rgba(0, 0, 0, 0);
 }
 .carousel-indicators .active {
@@ -4474,7 +4478,7 @@ button.close {
     visibility: hidden;
 }
 .text-hide {
-    font: 0/0 a;
+    //font: 0/0 a;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
