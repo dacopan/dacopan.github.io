@@ -50,7 +50,7 @@ Please go to corresponding module to see in detail its JSON configuration file.
 ```json
 [
   {
-	 "cfg": {
+    "cfg": {
      "local_backup_dir": "../backup_test_files/jom_backups/",
      "remote_backup_dir": "google_folder_id",
      "google_credentials_name": "jom_google_credentials.json",
@@ -79,7 +79,7 @@ Please go to corresponding module to see in detail its JSON configuration file.
       "include_list": [],
       "exclude_list": [],
       "dry_run": false,
-      "ionice": "idle",      
+      "ionice": "idle"      
     },    
     "custom": {
       
