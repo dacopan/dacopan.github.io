@@ -20,15 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 @mixin keyframes($name) {
-    @-webkit-keyframes #{$name} {
-        @content
-    }
-    @-moz-keyframes #{$name} {
-        @content;
-    }
-    @keyframes #{$name} {
-        @content;
-    }
+    @keyframes #{$name} {@content;}@-webkit-keyframes #{$name} {@content;}        
 }
 
 @mixin animation($str) {

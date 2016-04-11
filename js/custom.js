@@ -38,6 +38,7 @@ $(window).load(function () {
     $(".preloader .status").fadeOut();
     $(".preloader").delay(500).fadeOut("slow");
     if (!isMobile()) {
+        console.log('animation enabled:' + navigator.userAgent);
         new WOW().init();
     }
 
