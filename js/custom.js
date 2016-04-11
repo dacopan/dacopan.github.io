@@ -37,8 +37,13 @@ $(function () {
 $(window).load(function () {
     $(".preloader .status").fadeOut();
     $(".preloader").delay(500).fadeOut("slow");
-    new WOW().init();
-
+    if (!isMobile()) {
+        new WOW().init();
+    }
 
 
 });
+
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
