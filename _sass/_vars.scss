@@ -1,0 +1,63 @@
+/*
+Copyright (C) 2016 dacopan
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Created on : 07/04/2016, 18:08:40
+    Author     : dacopan
+*/
+
+$accent: #C8BC00;
+
+// Bootstrap shades
+$lightblue: #03A9F4 !default;
+$deeporange: #FF5722 !default;
+
+$primary: #4285F4 !default;
+$success: #00c853 !default;
+$info: $lightblue !default;
+$warning: $deeporange !default;
+$danger: #d32f2f !default;
+
+// Typography elements for Material
+$darkbg-text: rgba(255,255,255,0.84);
+$lightbg-text: rgba(0,0,0,0.84);
+$icon-color: rgba(0,0,0,0.5);
+
+/*** Navbar ***/
+$navbar-height: 64px !default;
+$navbar-height-mobile: 56px !default;
+$navbar-font-color: #fff !default;
+$navbar-brand-font-size: 2.1rem !default;
+
+$navbar-danger-bg: $danger;
+$navbar-inverse-bg: #5264AE;
+$navbar-warning-bg: $warning;
+$navbar-success-bg: $success;
+$navbar-info-bg:    $info;
+$navbar-default-bg: $primary;
+$navbar-color: $darkbg-text;
+$navbar-link-color: $darkbg-text;
+$navbar-link-hover-color: $darkbg-text;
+$navbar-link-hover-bg: transparent;
+$navbar-link-active-color: $darkbg-text;
+$navbar-link-active-bg: rgba(0,0,0,0.05);
+$navbar-link-disabled-color: #E5E5E5;
+$navbar-link-disabled-bg: transparent;
+$navbar-brand-color: $darkbg-text;
+$navbar-toggle-border-color: $darkbg-text;
+$navbar-toggle-hover-bg: transparent;
+$navbar-toggle-icon-bar-bg: $darkbg-text;
+$navbar-border: $darkbg-text;

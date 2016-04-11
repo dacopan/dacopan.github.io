@@ -1,0 +1,61 @@
+/*
+Copyright (C) 2016 dacopan
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Created on : 06/04/2016, 10:10:24
+    Author     : dacopan
+*/
+
+
+.anuncios{
+    padding-top: 2rem;
+}
+
+.site-footer{
+    padding-bottom: 2rem;
+}
+
+.bg-white{
+    background-color: #FFFFFF;
+}
+.fg-orange{
+    color:#FF5722;
+}
+.Fs20{
+    font-size: 20px;
+}
+.Fs30{
+    font-size: 30px;
+}
+.fg-gray{
+    color: #868686!important;
+}
+.shadow, .ui-shadow {
+    box-shadow: 0 2px 4px rgba(0,0,0,.35);
+}
+.opacity-6-hover{
+    opacity: .6;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+a.ribbon{
+    z-index: 9999;
+    img{
+        z-index: 9999;
+    }
+}

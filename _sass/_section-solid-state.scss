@@ -1,0 +1,286 @@
+/*
+Copyright (C) 2016 dacopan
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Created on : 07/04/2016, 10:05:33
+    Author     : dacopan
+*/
+// Palette.
+body{
+    background-color: $accent;
+    color:#fff;
+}
+.site-footer{
+    padding-bottom: 2rem;
+    a{
+        color:#fff;
+        opacity: .8;
+        &:hover{
+            opacity: 1;
+            text-decoration: none;
+        }
+    }
+}
+
+.wrapper {
+    background-color: #2e3141;
+    margin: 6.5em 0;
+    position: relative;
+    font-size: 20px;
+    color:#fff;
+    a{
+        color:#fff;
+        &.special:not(.button) {
+            text-decoration: none;
+            border-bottom: 0;
+            display: block;
+            font-family: Raleway, Helvetica, sans-serif;
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin: 0 0 2em 0;
+            text-transform: uppercase;
+            &:before {
+                -moz-transition: background-color 0.2s ease-in-out;
+                -webkit-transition: background-color 0.2s ease-in-out;
+                -ms-transition: background-color 0.2s ease-in-out;
+                transition: background-color 0.2s ease-in-out;
+                border-radius: 100%;
+                border: solid 2px rgba(255, 255, 255, 0.125);
+                content: '\f105';
+                display: inline-block;
+                font-size: 1.25em;
+                height: 2em;
+                line-height: 1.65em;
+                margin-right: 0.85em;
+                text-align: center;
+                text-indent: 0.15em;
+                vertical-align: middle;
+                width: 2em;
+
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-transform: none !important;
+            }
+        }
+
+
+    }
+}
+
+.wrapper .inner {
+    padding: 3em 0 1em 0 ;
+    margin: 0 auto;
+    width: 55em;
+}
+
+.wrapper.spotlight {
+    background-color: $accent;
+}
+
+.wrapper.spotlight .inner {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.wrapper.spotlight .image {
+    border-radius: 100%;
+    margin: 0 3em 2em 0;
+    width: 22em;
+    overflow: hidden;
+    -ms-flex: 1;
+}
+
+.wrapper.spotlight .image img {
+    border-radius: 100%;
+    width: 100%;
+}
+
+.wrapper.spotlight .content {
+    width: 100%;
+    -ms-flex: 2;
+}
+
+.wrapper.spotlight:nth-child(2n - 1) .inner {
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.wrapper.spotlight:nth-child(2n - 1) .image {
+    margin: 0 0 2em 3em;
+}
+
+//eee2
+.wrapper{
+    @include wrapper-edges-color($accent);
+
+    &:before, &:after {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        content: '';
+        display: block;
+        height: 6.5em;;
+        position: absolute;
+        width: 100%;
+    }
+
+    &:before {
+        left: 0;
+        top: -6.5em;
+    }
+
+    &:after {
+        @include vendor('transform', 'scaleY(-1)');
+        bottom: -6.5em;
+        left: 0;
+    }
+
+    &.alt {
+        &:before {
+            @include vendor('transform', 'scaleX(-1)');
+        }
+
+        &:after {
+            @include vendor('transform', 'scaleY(-1) scaleX(-1)');
+        }
+    }
+
+    @for $i from 2 through 6 {
+        $j: 3 * ($i - 1);
+        $color: saturate(darken($accent, $j), $j * 0.5);
+
+        &.style#{$i} {
+            background-color: $color;
+            @include wrapper-edges-color($color);
+        }
+    }
+}
+//eee2
+
+
+@media screen and (max-width: 980px) {
+
+    .wrapper {
+        margin: 4.75em 0;
+    }
+
+    .splitter.before, .splitter.after{
+        height: 4.75em;
+    }
+
+    .wrapper:before {
+        top: -4.75em;
+    }
+
+    .wrapper:after{
+        bottom: -4.75em;
+        left: 0;
+    }
+
+    .wrapper .inner {
+        padding: 3em 3em 1em 3em ;
+        width: 100%;
+    }
+
+    .wrapper.spotlight .image {
+        margin: 0 2em 2em 0;
+        width: 32em;
+    }
+
+    .wrapper.spotlight:nth-child(2n - 1) .image {
+        margin: 0 0 2em 2em;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    .wrapper {
+        margin: 2.5em 0;
+    }
+
+    .wrapper:before, .wrapper:after {
+        height: 2.5em;
+    }
+
+    .wrapper:before {
+        top: -2.5em;
+    }
+
+    .wrapper:after {
+        bottom: -2.5em;
+        left: 0;
+    }
+
+    .wrapper .inner {
+        padding: 2em 2em 0.1em 2em ;
+    }
+
+    .wrapper.spotlight .inner {
+        -moz-align-items: -moz-flex-start;
+        -webkit-align-items: -webkit-flex-start;
+        -ms-align-items: -ms-flex-start;
+        align-items: flex-start;
+    }
+
+    .wrapper.spotlight .image {
+        width: 19em;
+        margin: 0 1.75em 2em 0;
+    }
+
+    .wrapper.spotlight:nth-child(2n - 1) .image {
+        margin: 0 0 2em 1.75em;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .wrapper.spotlight .inner {
+        display: block;
+    }
+
+    .wrapper.spotlight .image {
+        margin: 0 0 1em 0 !important;
+        max-width: 85%;
+        width: 12em;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .wrapper .inner {
+        padding: 2em 1.5em 0.1em 1.5em ;
+    }
+
+}

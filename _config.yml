@@ -1,0 +1,48 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: dacopanCM
+description: > # this means to ignore newlines until "baseurl:"
+  Darwin A. Correa P. application repository and scripts, cloud, mobile and web development.
+  App development in Java, PHP, Android, Windows, UI, HTML5, CSS and much more.
+ 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.dacopancm.tk" # the base hostname & protocol for your site
+
+
+# About/contact header
+header-links:  # links to header on index page (icon:url)
+  dribbble: http://www.dacopancm.tk
+  linkedin: https://linkedin.com/in/dacopan
+  twitter: https://twitter.com/dacopan
+  #facebook: https://facebook.com/dacopan  
+  github: https://github.com/dacopan
+  email: dacopan.bsc@gmail.com
+  
+#SEO
+#ga: UA-50591469-2
+#ads: true
+author: dacopanCM
+author-website: http://www.dacopancm.tk
+logo: /images/logo.jpg
+twitter:
+  username: dacopan
+facebook:
+social:
+  links: #social links to google search console
+    - https://linkedin.com/in/dacopan
+    - https://twitter.com/dacopan
+    - https://github.com/dacopan
+
+
+# Build settings
+markdown: kramdown
+gems:
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap

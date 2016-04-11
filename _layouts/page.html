@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% if page.github-ribbon %}
+{{page.github-ribbon}}
+{% endif %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-9">
+            <section class="main-content">
+                {% include breadcrumbs.html %}
+
+                {% include ads/ads_header.html %}
+
+                {{ content }}
+
+                {% include ads/ads_footer.html %}
+            </section>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3">
+            <div class="anuncios">
+                {% if page.menu %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">Menu</div>
+                    <div class="panel-body">                        
+                        {% include_relative sidebar.html %}
+                    </div>
+                </div>
+
+                {% endif %}
+                {% include ads/ads_sidebar.html %}
+            </div>
+        </div>
+    </div>
+</div>

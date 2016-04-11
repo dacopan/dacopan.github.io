@@ -1,0 +1,23 @@
+<footer class="site-footer" id="footer">
+
+    <div class="container">
+
+        <div class="text-center">
+            {% if page.layout != 'home' %} {{ page.title }} by {% endif %}© <a href="{{ site.author-website }}">{{ site.author }}</a>. All rights reserved <br/>
+            <div style="opacity: .4">
+                <i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i> with <i class="fa fa-heart"></i>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/vendor.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/js/custom.js" type="text/javascript"></script>
+
+<script>
+$(window).scroll(function () {
+    $(".navbar").offset().top > 50 ? $(".navbar-fixed-top").addClass("top-nav-collapse") : $(".navbar-fixed-top").removeClass("top-nav-collapse")
+})
+</script>

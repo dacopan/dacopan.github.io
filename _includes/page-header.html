@@ -1,0 +1,42 @@
+{% if page.layout == 'home' %} 
+<section id="home">
+    <div id="bg" style="background-image: url(images/bg.jpg)"></div>
+    <div id="overlay" class="wow fadeIn" data-wow-delay="1s"></div>                
+
+    <!-- Header -->
+    <div id="header" class="wow fadeIn" data-wow-delay="1.75s">
+        <h1>{{ site.title }}</h1>
+        <p>{{ page.short-desc }}</p>
+        <nav>
+            <ul>
+                {% assign j = 2.5 %}
+                {% for socloc in site.header-links %}
+                {% if socloc[1] %}
+                {% if socloc[0] == 'email' %}
+                <li class="wow fadeInUp" data-wow-delay="{{ j }}s"><a href="mailto:{{ socloc[1] }}" class="round icon fa fa-envelope-o waves-effect waves-light"
+                                                                      ><span class="label">E-mail</span></a></li>
+                {% else %}
+                <li class="wow fadeInUp"  data-wow-delay="{{ j }}s"><a target="_blank" href="{{ socloc[1] }}" class="round icon fa fa-{{ socloc[0] }} waves-effect waves-light"
+                                                                       ><span class="label">{{ socloc[0] }}</span></a></li>
+                {% endif %}
+                {% endif %}
+                {% assign j = j | plus: 0.25 %}
+                {% endfor %}                
+            </ul>
+        </nav>
+    </div>
+</section>
+{% elsif page.description %}
+<section class="page-header">
+    <h1 class="project-name">{{ page.title }}</h1>
+    <h2 class="project-tagline">{{ page.description }}</h2>
+    {% if page.github-url %} 
+    <a href="//www.github.com/{{ page.github-url }}" class="btn waves-effect waves-light">View on GitHub</a>
+    <a href="//www.github.com/{{ page.github-url }}/zipball/master" class="btn waves-effect waves-light">Download .zip</a>
+    <a href="//www.github.com/{{ page.github-url }}/tarball/master" class="btn waves-effect waves-light">Download .tar.gz</a>
+    {% endif %}
+    {% if page.wiki %} 
+    <a href="{{ page.wiki }}" class="btn waves-effect waves-light">Wiki</a>
+    {% endif %}
+</section>
+{% endif %}
